@@ -1,35 +1,284 @@
-/* Basic styling for buttons and layout */
-.action-button, .next-button, .preset-button {
-  background-color: #4A4A4A;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #4f46e5;
+  --background-color: #f3f4f6;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --border-color: #e5e7eb;
+  --success-color: #10b981;
+  --error-color: #ef4444;
 }
 
-.deposit-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  margin-bottom: 20px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+.header {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Balance Section Styles */
+.balance-section {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.balance-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.balance-section p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.discover-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.discover-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Action Buttons Styles */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.action-button {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Transaction History Styles */
+.transaction-history {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.transaction-history h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .transaction-item {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.transaction-details h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.transaction-details p {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.transaction-amount {
+  font-weight: 600;
 }
 
 .transaction-amount.positive {
-  color: green;
+  color: var(--success-color);
 }
 
 .transaction-amount.negative {
-  color: red;
+  color: var(--error-color);
 }
 
-.balance-section, .transaction-list, .stats-graph {
-  padding: 20px;
+/* Navigation Bar Styles */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.75rem 0;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar a.active {
+  color: var(--primary-color);
+}
+
+/* Deposit Page Styles */
+.deposit-page {
+  padding: 1.5rem;
+}
+
+.deposit-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.preset-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.preset-button {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preset-button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.next-button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Transaction History Page Styles */
+.transaction-history-page {
+  padding: 1.5rem;
+}
+
+.stats-graph {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .preset-amounts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .balance-section {
+    padding: 3rem;
+  }
+
+  .transaction-history {
+    padding: 2rem;
+  }
 }
