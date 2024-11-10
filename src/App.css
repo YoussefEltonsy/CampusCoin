@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #6366f1;
-  --secondary-color: #4f46e5;
+  --secondary-color: #5946e5;
   --background-color: #f3f4f6;
   --text-color: #1f2937;
   --text-light: #6b7280;
@@ -84,7 +84,7 @@ body {
 
 /* Action Buttons Styles */
 .buttons {
-  display: flex;
+  display:contents;
   justify-content: space-between;
   gap: 1rem;
   margin: 1rem 0;
@@ -282,3 +282,29 @@ body {
     padding: 2rem;
   }
 }
+.myButton {
+  display:flex;
+  color: rgb(255, 255, 255); font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164);display:flex;;}
+  .myButton:hover {
+  background: #1C6EA4; }
+  .myButton:active {
+  background: #144E75; }
+
+  .button {
+    background-color: #6366f1; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 5%;
+  }
+  .button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }

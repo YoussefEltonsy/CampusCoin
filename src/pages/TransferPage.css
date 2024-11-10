@@ -1,0 +1,31 @@
+/* src/styles/TransferPage.css */
+.transfer-page {
+    padding: 20px;
+  }
+  
+  .transfer-page form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .transfer-page label {
+    margin-bottom: 5px;
+  }
+  
+  .transfer-page input {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .transfer-page button {
+    padding: 10px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .transfer-page button:hover {
+    background-color: #6366f1;
+  }
